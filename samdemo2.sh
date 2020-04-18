@@ -20,10 +20,7 @@ if [ -z "$STACK_NAME" ]; then
   exit 1
 fi
 
-# zip up function
-zip index.js
-
-# upload zip to S3
+# upload files to S3
 sam package \
   --template-file template.yaml \
   --s3-bucket $S3_BUCKET \
