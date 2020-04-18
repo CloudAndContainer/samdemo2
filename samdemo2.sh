@@ -3,7 +3,7 @@
 S3_BUCKET=serverlesswebapplifecyclemgmt
 STACK_NAME=serverlesswebapplifecyclemgmt
 
-USE_MSG="Usage: deploy.sh S3_BUCKET STACK_NAME"
+USE_MSG="Usage: samdemo2.sh S3_BUCKET STACK_NAME"
 
 if [ -z "$S3_BUCKET" ]; then
   echo "Missing S3_BUCKET and STACK_NAME"
@@ -18,7 +18,7 @@ if [ -z "$STACK_NAME" ]; then
 fi
 
 # zip up function
-zip api-proxy-lambda.zip index.js
+zip index.js
 
 # upload zip to S3
 sam package \
