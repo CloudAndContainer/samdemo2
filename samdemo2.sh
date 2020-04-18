@@ -39,5 +39,3 @@ API_ENDPOINT=$(aws cloudformation describe-stacks \
 
 # remove quotes
 API_ENDPOINT=$(sed -e 's/^"//' -e 's/"$//' <<< $API_ENDPOINT)
-
-echo "Test in browser: $API_ENDPOINT"
